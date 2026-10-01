@@ -9,7 +9,7 @@ const links = [
 
 export function SiteHeader({ active }: { active: string }) {
   return <header className="site-header">
-    <Link className="wordmark" href="/" aria-label="Golu home">golu</Link>
+    <Link className="wordmark" href="/" aria-label="Golu home"><span>✦</span> golu <span>✦</span></Link>
     <nav aria-label="Main navigation">
       {links.map(([label, href]) => <Link className={active === href ? "active" : ""} href={href} key={href}>{label}</Link>)}
     </nav>
