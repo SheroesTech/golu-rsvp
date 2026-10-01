@@ -13,3 +13,11 @@ The About and Through the years pages link to the [shared Google Photos album](h
 3. Vercel detects Next.js from `vercel.json`; retain the default build settings and select **Deploy**.
 
 The current RSVP form demonstrates the interaction in the browser. Connect `submit` in `app/page.tsx` to your preferred RSVP storage or email service before collecting real submissions.
+
+## Host invitations
+
+The `/admin` page provides a browser-local guest list and invitation controls. To enable delivery, add `RESEND_API_KEY`, `INVITE_FROM_EMAIL` (a verified Resend sender), and `NEXT_PUBLIC_SITE_URL` as Vercel environment variables. The invitation endpoint is `app/api/invitations/route.ts`.
+
+## Admin password
+
+The `/admin` page and invitation endpoint require the server-side password stored in `ADMIN_PASSWORD.txt`. Change the file contents to rotate the password, then restart or redeploy the server. Do not expose this file through a public/static directory or share it in screenshots.
