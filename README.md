@@ -16,7 +16,11 @@ The current RSVP form demonstrates the interaction in the browser. Connect `subm
 
 ## Host invitations
 
-The `/admin` page provides a browser-local guest list and invitation controls. To enable delivery, add `RESEND_API_KEY`, `INVITE_FROM_EMAIL` (a verified Resend sender), and `NEXT_PUBLIC_SITE_URL` as Vercel environment variables. The invitation endpoint is `app/api/invitations/route.ts`.
+The `/admin` page provides a server-backed guest list and invitation controls. To enable delivery, add `RESEND_API_KEY`, `INVITE_FROM_EMAIL` (a verified Resend sender), and `NEXT_PUBLIC_SITE_URL` as Vercel environment variables. The invitation endpoint is `app/api/invitations/route.ts`.
+
+## Guest database
+
+RSVPs and admin guest records are stored in Vercel KV using `KV_REST_API_URL` and `KV_REST_API_TOKEN`. Add a Vercel KV/Upstash store to the project, then add both variables to Vercel before accepting RSVPs. The public RSVP form writes attendance records to the backend, and `/admin` reads those same records.
 
 ## Admin password
 
