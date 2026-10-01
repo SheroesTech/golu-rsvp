@@ -2,9 +2,9 @@
 
 A colorful, responsive Next.js site for a Navarathri Golu celebration. It includes a home page with RSVP controls plus About, Stories, and Through the years pages.
 
-## Replace the gallery images
+## Photo album
 
-All temporary images are regular `<img>` elements with remote Unsplash URLs. Replace the `src` values in the route files with your own image URLs, or place images in `public/` and refer to them with a path such as `/golu-2024.jpg`.
+The About and Through the years pages link to the [shared Google Photos album](https://photos.app.goo.gl/m3B7RaYJcruuyr8Y9). Google Photos share pages do not expose stable, embeddable image URLs, so the gallery remains ready for local images. Download the selected album images into `public/` and replace the gallery `src` values with paths such as `/golu-2024.jpg` when you are ready to embed them.
 
 ## Deploy to Vercel
 
